@@ -551,10 +551,10 @@ $.cf = {
 			else
 			{
 				$(oDTP.element).addClass("dtpicker-overlay");
-				$(".dtpicker-overlay").click(function(e)
-				{
-					oDTP._hidePicker("");
-				});
+				// $(".dtpicker-overlay").click(function(e)
+				// {
+				// 	oDTP._hidePicker("");
+				// });
 			}
 		
 			var sTempStr = "";	
@@ -733,6 +733,7 @@ $.cf = {
 			if(oDTP.oData.oInputElement !== null)
 			{
 				if(!oDTP.settings.isInline)
+					console.log('hide picker')
 					oDTP._hidePicker(0, oElement);
 			}
 			else
@@ -752,11 +753,13 @@ $.cf = {
 					if(oDTP.settings.buttonClicked)
 						oDTP.settings.buttonClicked.call(oDTP, "TAB", oDTP.oData.oInputElement);
 					if(!oDTP.settings.isInline)
+						console.log('hide picker')
 						oDTP._hidePicker(0);
 				}
 				else
 				{
 					if(!oDTP.settings.isInline)
+						console.log('hide picker')
 						oDTP._hidePicker("");
 				}
 			}
@@ -929,6 +932,7 @@ $.cf = {
 				oDTP._setValueOfElement("");
 			}
 			if(!oDTP.settings.isInline)
+				console.log('hide picker')
 				oDTP._hidePicker("");
 		},
 	
@@ -1516,10 +1520,10 @@ $.cf = {
 		
 			if(!oDTP.settings.isInline)
 			{
-				$(document).on("click.DateTimePicker", function(e)
-				{
-					oDTP._hidePicker("");
-				});
+				// $(document).on("click.DateTimePicker", function(e)
+				// {
+				// 	oDTP._hidePicker("");
+				// });
 			}
 		
 			$(document).on("keydown.DateTimePicker", function(e)
@@ -1577,6 +1581,7 @@ $.cf = {
 					if(! $(".dtpicker-compValue").is(":focus") && keyCode !== 9)
 					{
 						//if(keyCode !== 37 && keyCode !== 39)
+						    console.log('hide picker')
 							oDTP._hidePicker("");
 					}
 				});
@@ -1611,7 +1616,7 @@ $.cf = {
 					{
 						if($oParentElem.is(":last-child") && !oDTP.oData.bElemFocused)
 						{
-							oDTP._setButtonAction(false);
+							//oDTP._setButtonAction(false);
 						}
 					}, 50);			
 				});
@@ -1681,6 +1686,7 @@ $.cf = {
 				if(oDTP.settings.buttonClicked)
 					oDTP.settings.buttonClicked.call(oDTP, "CLOSE", oDTP.oData.oInputElement);
 				if(!oDTP.settings.isInline)
+					console.log('hide picker')
 					oDTP._hidePicker("");
 			});
 		
@@ -2915,6 +2921,7 @@ $.cf = {
 				oDTP.settings.isPopup = bIsPopup;
 
 				if($(oDTP.element).css("display") !== "none")
+					console.log('hide picker')
 					oDTP._hidePicker(0);
 			
 				if(oDTP.settings.isPopup)
