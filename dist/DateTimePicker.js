@@ -2221,7 +2221,7 @@ $.cf = {
 							oDTP.oData.bArrMatchFormat[7]; // "dd-MMM-yyyy hh:mm:ss AA"
 
 			iSeconds = bShowSeconds ? oDTP._adjustSeconds(iSeconds) : 0;
-		
+			sDateTime = oDTP.settings.defaultDate
 			if($.cf._isValid(sDateTime))
 			{
 				if(typeof sDateTime === "string")
@@ -2267,6 +2267,7 @@ $.cf = {
 					}
 				
 					sTime = sArrDateTime[1];
+					
 					if($.cf._isValid(sTime))
 					{
 						if(oDTP.oData.bIs12Hour)
@@ -2316,7 +2317,7 @@ $.cf = {
 				}
 			}
 			iMinutes = oDTP._adjustMinutes(iMinutes);
-    	
+    		
 			dTempDate = new Date(iYear, iMonth, iDate, iHour, iMinutes, iSeconds, 0);
 			return dTempDate;
 		},
