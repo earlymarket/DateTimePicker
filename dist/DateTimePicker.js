@@ -247,7 +247,6 @@ $.cf = {
 								oDTP = oDTP[sKey];
 							
 								console.log("Destroyed DateTimePicker Object");
-								console.log(oDTP);
 							
 								break;
 							}
@@ -300,7 +299,6 @@ $.cf = {
 			oDTP._setTimeFormatArray(); // Set TimeFormatArray
 			oDTP._setDateTimeFormatArray(); // Set DateTimeFormatArray
 
-			console.log($(oDTP.element).data('parentelement') + " " + $(oDTP.element).attr('data-parentelement'));
 			if($(oDTP.element).data('parentelement') !== undefined)
 	        {
 	           	oDTP.settings.parentElement = $(oDTP.element).data('parentelement');
