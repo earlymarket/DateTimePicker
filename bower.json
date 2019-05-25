@@ -15,7 +15,7 @@
     "input"
   ],
   
-  "version": "0.2.4",
+  "version": "0.2.5",
     
   "main": ["dist/DateTimePicker.min.js", "dist/DateTimePicker.min.css"],
   
